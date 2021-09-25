@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Fiendish Flesh Golem" CA="12" MaxHp="210" TempHp="0" Hp="210" SpellSave="0" SpellHitModifier="0" Level="8">
+  <Characteristics MasteryBonus="0">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="5" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="-1" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="5" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="-2" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="0" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="-3" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Immune" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Immune" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Immune" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Fire" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Immune" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Immune" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. The golem makes two slam attacks.</ActionDescription>
+  <SpecialAbilities>- Berserk. Whenever the golem starts its turn with 100 hit points or fewer, roll a d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points. If the golem's creator is within 60 feet of the berserk golem, the creator can try to calm it by speaking firmly and persuasively. The golem must be able to hear its creator, who must take an action to make a DC 15 Charisma (Persuasion) check. If the check succeeds, the golem ceases being berserk. If it takes damage while still at 100 hit points or fewer, the golem might go berserk again.
+- Immutable Form. The golem is immune to any spell or effect that would alter its form.
+- Lightning Absorption. Whenever the golem is subjected to lightning damage, it takes no damage and instead regains a number of hit points equal to the lightning damage dealt.
+- Magic Resistance. The golem has advantage on saving throws against spells and other magical effects.
+- Magic Weapons. The golem's weapon attacks are magical.</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Slam" Range="CloseRange" HitBonus="8">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Bludgeoning_Magic">
+              <Damage Modifier="5">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="2" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Ray of Sickness" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+  <Description>A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 poison damage and must make a Constitution saving throw. On a failed save, it is also poisoned until the end of your next turn.
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.</Description>
+  <AdditionalHitDamagePerLevel>
+      <DamageTemplate SituationalDamageModifier="Normal" DamageType="Poison">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="8" DiceAmount="1" />
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+      <DamageTemplate SituationalDamageModifier="Normal" DamageType="Poison">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="8" DiceAmount="2" />
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+      <OnHitStatus Header="Poisoned" HasApplyCondition="true" ApplySavingCharacteristic="Constitution" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="2" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+        <ToolTip>Disadvantage on Attack Rolls and Ability Checks.</ToolTip>
+        <Description>Poisoned - Disadvantage on Attack Rolls and Ability Checks.</Description>
+        <OnApplyDamageList>
+        </OnApplyDamageList>
+        <DotDamageList>
+        </DotDamageList>
+      </OnHitStatus>
+  </AppliedStatus>
+</Spell>

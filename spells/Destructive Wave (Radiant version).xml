@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Destructive Wave (Radiant version)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="5" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Constitution" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+  <Description>You strike the ground, creating a burst of divine energy that ripples outward from you. Each creature you choose within 30 feet of you must succeed on a Constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone.</Description>
+  <AdditionalHitDamagePerLevel>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+      <DamageTemplate SituationalDamageModifier="Halved" DamageType="Radiant">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="6" DiceAmount="5">
+              <RolledDices />
+            </Dices>
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+      <DamageTemplate SituationalDamageModifier="Halved" DamageType="Thunder">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="6" DiceAmount="5">
+              <RolledDices />
+            </Dices>
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+      <OnHitStatus Header="Prone" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Canceled">
+        <ToolTip>Attacks Against: melee advantage / range disadvantage</ToolTip>
+        <Description>A prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition.
+The creature has disadvantage on attack rolls.
+An attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the attack roll has disadvantage.</Description>
+        <OnApplyDamageList>
+        </OnApplyDamageList>
+        <DotDamageList>
+        </DotDamageList>
+      </OnHitStatus>
+  </AppliedStatus>
+</Spell>

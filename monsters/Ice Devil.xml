@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Ice Devil" CA="18" MaxHp="180" TempHp="0" Hp="180" SpellSave="10" SpellHitModifier="0" Level="1">
+  <Characteristics MasteryBonus="5">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="5" />
+      <Characteristic Name="Dexterity" Mastery="true" Modifier="2" />
+      <Characteristic Name="Constitution" Mastery="true" Modifier="4" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="4" />
+      <Characteristic Name="Wisdom" Mastery="true" Modifier="2" />
+      <Characteristic Name="Charisma" Mastery="true" Modifier="4" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Immune" />
+      <DamageTypeAffinity Type="Fire" Affinity="Immune" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Immune" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. 
+The devil makes three attacks: one with its bite, one with its claws, and one with its tail.
+- Wall of Ice (Recharge 6).
+The devil magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.
+When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a DC 17 Dexterity saving throw, taking 35 (10d6) cold damage on a failed save, or half as much damage on a successful one.
+The wall lasts for 1 minute or until the devil is incapacitated or dies. The wall can be damaged and breached; each 10-foot section has AC 5, 30 hit points, vulnerability to fire damage, and immunity to acid, cold, necrotic, poison, and psychic damage. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a DC 17 Constitution saving throw, taking 17 (5d6) cold damage on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes.</ActionDescription>
+  <SpecialAbilities>- Devil's Sight. 
+Magical darkness doesn't impede the devil's darkvision.
+- Magic Resistance.
+The devil has advantage on saving throws against spells and other magical effects.</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Bite" Range="CloseRange" HitBonus="10">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="5">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Cold">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="3">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Claws" Range="CloseRange" HitBonus="10">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+              <Damage Modifier="5">
+                <DicesList>
+                  <Dices DiceValue="4" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Cold">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="3">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Tail" Range="CloseRange" HitBonus="10">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Bludgeoning">
+              <Damage Modifier="5">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Cold">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="3">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

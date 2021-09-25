@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Fire Breath (Recharge 5-6, Chimera) " Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="15" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+  <Description>The dragon head exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 31 (7d8) fire damage on a failed save, or half as much damage on a successful one.</Description>
+  <AdditionalHitDamagePerLevel>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+      <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="8" DiceAmount="7">
+              <RolledDices />
+            </Dices>
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+  </AppliedStatus>
+</Spell>

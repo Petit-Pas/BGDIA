@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Cloud of Daggers (damage)" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="2" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+  <Description>You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there.
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd. </Description>
+  <AdditionalHitDamagePerLevel>
+      <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="4" DiceAmount="2" />
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+      <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="4" DiceAmount="4" />
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+  </AppliedStatus>
+</Spell>

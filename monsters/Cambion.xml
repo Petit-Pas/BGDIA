@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Cambion" CA="19" MaxHp="82" TempHp="0" Hp="82" SpellSave="10" SpellHitModifier="0" Level="5">
+  <Characteristics MasteryBonus="3">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="true" Modifier="4" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="4" />
+      <Characteristic Name="Constitution" Mastery="true" Modifier="3" />
+      <Characteristic Name="Intelligence" Mastery="true" Modifier="2" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="1" />
+      <Characteristic Name="Charisma" Mastery="true" Modifier="3" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Fire" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. The cambion makes two melee attacks or uses its Fire Ray twice.
+- Fiendish Charm. One humanoid the cambion can see within 30 feet of it must succeed on a DC 14 Wisdom saving throw or be magically charmed for 1 day. The charmed target obeys the cambion's spoken commands. If the target suffers any harm from the cambion or another creature or receives a suicidal command from the cambion, the target can repeat the saving throw, ending the effect on itself on a success. If a target's saving throw is successful, or if the effect ends for it, the creature is immune to the cambion's Fiendish Charm for the next 24 hours.</ActionDescription>
+  <SpecialAbilities>- Innate Spellcasting (DC 14)
+- Fiendish Blessing. The AC of the cambion includes its Charisma bonus.</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Spear (x2, close)" Range="CloseRange" HitBonus="7">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="4">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Spear (x2, range)" Range="LongRange" HitBonus="7">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="4">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Fire Ray (x2)" Range="LongRange" HitBonus="7">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="3" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Fiendish Charm" Range="CloseRange" HitBonus="50">
+        <OnHitStatuses HasSavingThrow="false">
+            <OnHitStatus Header="Charmed" HasApplyCondition="true" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="14" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+              <ToolTip>Must obey the Cambion</ToolTip>
+              <Description>One humanoid the cambion can see within 30 feet of it must succeed on a DC 14 Wisdom saving throw or be magically charmed for 1 day. The charmed target obeys the cambion's spoken commands. If the target suffers any harm from the cambion or another creature or receives a suicidal command from the cambion, the target can repeat the saving throw, ending the effect on itself on a success. If a target's saving throw is successful, or if the effect ends for it, the creature is immune to the cambion's Fiendish Charm for the next 24 hours.</Description>
+              <OnApplyDamageList>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </OnHitStatuses>
+        <DamageList>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+      <Counter Name="Alter self" MaxValue="3" CurrentValue="3" />
+      <Counter Name="innate spells: Plane Shift (self only)" MaxValue="1" CurrentValue="1" />
+      <Counter Name="Command" MaxValue="3" CurrentValue="3" />
+      <Counter Name="Detect Magic" MaxValue="3" CurrentValue="3" />
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

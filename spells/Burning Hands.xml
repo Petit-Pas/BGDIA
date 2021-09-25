@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Burning Hands" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+  <Description>As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one.
+The fire ignites any flammable objects in the area that aren't being worn or carried.
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st. </Description>
+  <AdditionalHitDamagePerLevel>
+      <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="6" DiceAmount="1" />
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+      <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="6" DiceAmount="3" />
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+  </AppliedStatus>
+</Spell>

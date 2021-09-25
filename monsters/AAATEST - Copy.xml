@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="AAATEST - Copy" CA="10" MaxHp="0" TempHp="0" Hp="0" SpellSave="10" SpellHitModifier="0" Level="1">
+  <Characteristics MasteryBonus="0">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="0" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="0" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="0" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="0" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="0" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="0" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription />
+  <SpecialAbilities />
+  <HitAttacks>
+      <HitAttackTemplate Name="Name" Range="CloseRange" HitBonus="20">
+        <OnHitStatuses HasSavingThrow="false">
+            <OnHitStatus Header="dsf" HasApplyCondition="true" ApplySavingCharacteristic="Constitution" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="2" CanRedoSavingThrow="true" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+              <ToolTip />
+              <Description />
+              <OnApplyDamageList>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </OnHitStatuses>
+        <DamageList>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="infinte status" Range="CloseRange" HitBonus="20">
+        <OnHitStatuses HasSavingThrow="false">
+            <OnHitStatus Header="Le statut" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+              <ToolTip>oui</ToolTip>
+              <Description>bien sur</Description>
+              <OnApplyDamageList>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </OnHitStatuses>
+        <DamageList>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="New Test" Range="CloseRange" HitBonus="20">
+        <OnHitStatuses HasSavingThrow="false">
+            <OnHitStatus Header="Oui le statut" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+              <ToolTip />
+              <Description />
+              <OnApplyDamageList>
+                  <DamageTemplate SituationalDamageModifier="Normal" DamageType="Force">
+                    <Damage Modifier="0">
+                      <DicesList>
+                        <Dices DiceValue="4" DiceAmount="1">
+                          <RolledDices />
+                        </Dices>
+                      </DicesList>
+                    </Damage>
+                  </DamageTemplate>
+                  <DamageTemplate SituationalDamageModifier="Normal" DamageType="Force">
+                    <Damage Modifier="0">
+                      <DicesList>
+                        <Dices DiceValue="4" DiceAmount="1">
+                          <RolledDices />
+                        </Dices>
+                      </DicesList>
+                    </Damage>
+                  </DamageTemplate>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </OnHitStatuses>
+        <DamageList>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

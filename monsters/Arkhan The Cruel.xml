@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Arkhan The Cruel" CA="23" MaxHp="221" TempHp="0" Hp="221" SpellSave="17" SpellHitModifier="9" Level="1">
+  <Characteristics MasteryBonus="5">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="5" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="1" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="4" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="0" />
+      <Characteristic Name="Wisdom" Mastery="true" Modifier="0" />
+      <Characteristic Name="Charisma" Mastery="true" Modifier="4" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>-Multiattack. Arkhan makes three weapon attacks.
+- Fane-Eater. If the target is a creature and Arkhan rolls a 20 on the attack roll, the creature takes an extra 9 (2d8) necrotic damage, and Arkhan regains an amount of hit points equal to the necrotic damage dealt.</ActionDescription>
+  <SpecialAbilities>- Special Equipment. Arkhan wields Fane-Eater and wears a suit of Obsidian Flint Dragon Plate. The armor gives Arkhan advantage on ability checks and saving throws made to avoid or end the grappled condition on him.
+- Aura of Hate. While Arkhan isn't incapacitated, he and all fiends and undead within 30 feet of him deal 4 extra damage whenever they hit with a melee weapon attack (already factored into Arkhan's attacks). This extra damage is of the same type as the weapon's damage type.
+- Hand of Vecna. The Hand of Vecna has 8 charges and regains 1d4 + 4 expended charges daily at dawn. Arkhan can cast the following spells from the hand by expending the specified number of charges (spell save DC 18): finger of death (5 charges), sleep (1 charge), slow (2 charges), and teleport (3 charges).
+Innate Spellcasting. Arkhan's spellcasting ability is Charisma (spell save DC 17). He can cast the following spells, requiring no material components:</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Fane-Eater (BattleAxe)" Range="CloseRange" HitBonus="13">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+              <Damage Modifier="12">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Cold">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Javelin" Range="CloseRange" HitBonus="10">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="5">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Cold">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+      <Spell Name="Finger of Death (DC 18)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="7" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Constitution" SavingDifficulty="18" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 7d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one.
+A humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.</Description>
+        <AdditionalHitDamagePerLevel>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Necrotic">
+              <Damage Modifier="30">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="7">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Slow" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="3" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.
+An affected target’s speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can’t use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature’s abilities or magic items, it can’t make more than one melee or ranged attack during its turn.
+If the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn’t take effect until the creature’s next turn, and the creature must use its action on that turn to complete the spell. If it can’t, the spell is wasted.
+A creature affected by this spell makes another Wisdom saving throw at the end of its turn. On a successful save, the effect ends for it.</Description>
+        <AdditionalHitDamagePerLevel>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+            <OnHitStatus Header="Slowed" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="10" CanRedoSavingThrow="true" SavingIsRemadeAtStartOfTurn="false" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Canceled">
+              <ToolTip>-2 to AC and DEX savings, can't use reactions. Action OR Bonus Action. No more than 1 melee or ranged attack per turn. A spell cast with cast time of 1 action fails on 11 or higher on D20.</ToolTip>
+              <Description>An affected target’s speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can’t use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature’s abilities or magic items, it can’t make more than one melee or ranged attack during its turn.
+If the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn’t take effect until the creature’s next turn, and the creature must use its action on that turn to complete the spell. If it can’t, the spell is wasted.
+A creature affected by this spell makes another Wisdom saving throw at the end of its turn. On a successful save, the effect ends for it.</Description>
+              <OnApplyDamageList>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </AppliedStatus>
+      </Spell>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

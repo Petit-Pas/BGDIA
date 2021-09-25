@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Merregon" CA="16" MaxHp="45" TempHp="0" Hp="45" SpellSave="10" SpellHitModifier="0" Level="4">
+  <Characteristics MasteryBonus="0">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="4" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="2" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="3" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="-2" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="1" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="-1" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Fire" Affinity="Immune" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Immune" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. The merregon makes two halberd attacks, or if an allied fiend of challenge rating 6 or higher is within 60 feet of it, the merregon makes three halberd attacks.
+REACTION
+-  Loyal Bodyguard. When another fiend within 5 feet of the merregon is hit by an attack, the merregon causes itself to be hit instead.</ActionDescription>
+  <SpecialAbilities>- Devil's Sight. Magical darkness doesn't impede the merregon's darkvision.
+- Magic Resistance. The merregon has advantage on saving throws against spells and other magical effects.</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Halberd" Range="CloseRange" HitBonus="6">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+              <Damage Modifier="4">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Heavy Crossbow" Range="LongRange" HitBonus="4">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="2">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

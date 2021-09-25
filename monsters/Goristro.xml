@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Goristro" CA="19" MaxHp="310" TempHp="0" Hp="310" SpellSave="10" SpellHitModifier="0" Level="17">
+  <Characteristics MasteryBonus="6">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="true" Modifier="7" />
+      <Characteristic Name="Dexterity" Mastery="true" Modifier="0" />
+      <Characteristic Name="Constitution" Mastery="true" Modifier="7" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="-2" />
+      <Characteristic Name="Wisdom" Mastery="true" Modifier="1" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="2" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Immune" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. The goristro makes three attacks: two with its fists and one with its hoof.</ActionDescription>
+  <SpecialAbilities>- Charge. If the goristro moves at least 15 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 38 (7d10) piercing damage. If the target is a creature, it must succeed on a DC 21 Strength saving throw or be pushed up to 20 feet away and knocked prone.
+- Labyrinthine Recall. The goristro can perfectly recall any path it has traveled.
+- Magic Resistance. The goristro has advantage on saving throws against spells and other magical effects.
+- Siege Monster. The goristro deals double damage to objects and structures.</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Fist" Range="CloseRange" HitBonus="13">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Bludgeoning">
+              <Damage Modifier="7">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="3" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Hoof" Range="CloseRange" HitBonus="13">
+        <OnHitStatuses HasSavingThrow="false">
+            <OnHitStatus Header="Prone" HasApplyCondition="true" ApplySavingCharacteristic="Strength" ApplySavingDifficulty="21" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+              <ToolTip>Advantage/Disadvantage</ToolTip>
+              <Description />
+              <OnApplyDamageList>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Bludgeoning">
+              <Damage Modifier="7">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="3" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Gore" Range="CloseRange" HitBonus="13">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="7">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="7" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

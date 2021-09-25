@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Warlock of the Fiend" CA="15" MaxHp="78" TempHp="0" Hp="78" SpellSave="15" SpellHitModifier="7" Level="1">
+  <Characteristics MasteryBonus="3">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="0" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="2" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="2" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="1" />
+      <Characteristic Name="Wisdom" Mastery="true" Modifier="1" />
+      <Characteristic Name="Charisma" Mastery="true" Modifier="4" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription />
+  <SpecialAbilities>- Dark One's Own Luck (Recharges after a Short or Long Rest). When the warlock makes an ability check or saving throw, it can add a d10 to the roll. It can do this after the roll is made but before any of the roll's effects occur.
+- Innate Spellcasting. The warlock's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save DC 15), requiring no material components:
+	- At will: alter self, false life, levitate (self only), mage armor (self only), silent image
+	- 1/day each: feeblemind, finger of death, plane shift
+- Spellcasting. The warlock is a 17th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:
+	- Cantrips (at will): eldritch blast, fire bolt, friends, mage hand, minor illusion, prestidigitation, shocking grasp
+	- 1st-5th level (4 5th-level slots): banishment, burning hands, flame strike, hellish rebuke, magic circle, scorching ray, scrying, stinking cloud, suggestion, wall of fire</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Mace" Range="CloseRange" HitBonus="3">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Bludgeoning">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="3">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+      <Spell Name="Burning Hands" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one.
+The fire ignites any flammable objects in the area that aren't being worn or carried.
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st. </Description>
+        <AdditionalHitDamagePerLevel>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="3">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Eldritch Blast" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="1" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="true" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.
+The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.</Description>
+        <AdditionalHitDamagePerLevel>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Force">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Feeblemind" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="8" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Intelligence" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must make an Intelligence saving throw.
+On a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.
+At the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.
+The spell can also be ended by greater restoration, heal, or wish.</Description>
+        <AdditionalHitDamagePerLevel>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Psychic">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="4">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+            <OnHitStatus Header="Feebleminded" HasApplyCondition="true" ApplySavingCharacteristic="Intelligence" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+              <ToolTip>Intelligence is now 1</ToolTip>
+              <Description>The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.
+At the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.
+The spell can also be ended by greater restoration, heal, or wish.</Description>
+              <OnApplyDamageList>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Finger of Death" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="7" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Constitution" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 7d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one.
+A humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.</Description>
+        <AdditionalHitDamagePerLevel>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Necrotic">
+              <Damage Modifier="30">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="7">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Fire Bolt" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn’t being worn or carried. This spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).</Description>
+        <AdditionalHitDamagePerLevel>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Flame Strike (fire level up)" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="5" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 4d6 fire damage and 4d6 radiant damage on a failed save, or half as much damage on a successful one.
+At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th.</Description>
+        <AdditionalHitDamagePerLevel>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="4">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Radiant">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="4">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Flame Strike (radiant level up)" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="5" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 4d6 fire damage and 4d6 radiant damage on a failed save, or half as much damage on a successful one.
+At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th.</Description>
+        <AdditionalHitDamagePerLevel>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Radiant">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="4">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Radiant">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="4">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Hellish Rebuke" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a Dexterity saving throw. It takes 2d10 fire damage on a failed save, or half as much damage on a successful one.
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.</Description>
+        <AdditionalHitDamagePerLevel>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Scorching Ray" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="1" BaseLevel="2" AmountTargets="3" CanSelectSameTargetTwice="true" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>You create three rays of fire and hurl them at targets within range. You can hurl them at one target or several. Make a ranged spell attack for each ray. On a hit, the target takes 2d6 fire damage.
+At Higher Levels: When you cast this spell using a spell slot of 3rd level or higher, you create one additional ray for each slot level above 2nd.</Description>
+        <AdditionalHitDamagePerLevel>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Shocking Grasp" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell Attack against the target. You have advantage on the Attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take Reactions until the start of its next turn.
+The spell's damage increases by 1d8 when you reach 5th Level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
+        <AdditionalHitDamagePerLevel>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Lightning">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Lightning">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+            <OnHitStatus Header="Shocked" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="false" DurationIsBasedOnStartOfTurn="true" RemainingRounds="1" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+              <ToolTip>Can’t take reactions</ToolTip>
+              <Description>On a hit, the target takes 1d8 lightning damage, and it can’t take reactions until the start of its next turn.</Description>
+              <OnApplyDamageList>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Wall of Fire (DoT)" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="4" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>You create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration.
+When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 5d8 fire damage, or half as much damage on a successful save.
+One side of the wall, selected by you when you cast this spell, deals 5d8 fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.
+At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.</Description>
+        <AdditionalHitDamagePerLevel>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="5">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+      <Spell Name="Wall of Fire (spawn)" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="4" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>You create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration.
+When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 5d8 fire damage, or half as much damage on a successful save.
+One side of the wall, selected by you when you cast this spell, deals 5d8 fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.
+At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.</Description>
+        <AdditionalHitDamagePerLevel>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="5">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

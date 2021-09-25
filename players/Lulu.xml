@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Character xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Lulu" CA="18" MaxHp="43" TempHp="0" Hp="38" SpellSave="10" SpellHitModifier="0" HasInspiration="false" Level="8">
+  <Characteristics MasteryBonus="3">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="0" />
+      <Characteristic Name="Dexterity" Mastery="true" Modifier="0" />
+      <Characteristic Name="Constitution" Mastery="true" Modifier="1" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="3" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="4" />
+      <Characteristic Name="Charisma" Mastery="true" Modifier="3" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Immune" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Trumpet of Blasting. Each creature in the cone must make a DC 14 Constitution saving throw. On a failed save, a creature takes 17 (5d6) thunder damage and is deafened for 1 minute. On a successful save, a creature takes half as much damage and isn't deafened. Nonmagical objects in the cone that aren't being held or worn take 35 (10d6) thunder damage.
+- Trumpet of Sparkles. Creatures in the cone must make a DC 14 Constitution saving throw, taking 22 (4d8 + 4) radiant damage on a failed save, or half as much damage on a successful one. Evil creatures have disadvantage on the saving throw. Good creatures in the cone take no damage.</ActionDescription>
+  <SpecialAbilities>- Aura of Invulnerability. An invisible aura forms a 10-foot-radius sphere around the hollyphant for as long as it lives. Any spell of 5th level or lower cast from outside the barrier can't affect creatures or objects within it, even if the spell is cast using a higher level spell slot. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from the areas affected by such spells. The hollyphant can use an action to suppress this trait until its concentration ends (as if concentrating on a spell).
+/!\ players do not know about this as Lulu doesn't even remember it</SpecialAbilities>
+  <HitAttacks>
+    <HitAttackTemplate Name="Tusks" Range="CloseRange" HitBonus="3">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing_Magic">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="6" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+    <HitAttackTemplate Name="Trumpet of Blasting" Range="CloseRange" HitBonus="20">
+      <OnHitStatuses>
+        <OnHitStatus Header="Deafened" HasApplyCondition="true" ApplySavingCharacteristic="Constitution" ApplySavingDifficulty="14" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="false" DurationIsBasedOnStartOfTurn="false" RemainingRounds="10" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>fails ability checks that require hearing</ToolTip>
+          <Description />
+          <OnApplyDamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Thunder">
+              <Damage LastRoll="0" Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="5">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+          </OnApplyDamageList>
+          <DotDamageList />
+        </OnHitStatus>
+      </OnHitStatuses>
+      <DamageList />
+    </HitAttackTemplate>
+    <HitAttackTemplate Name="Trumpet of Sparkles" Range="CloseRange" HitBonus="20">
+      <OnHitStatuses>
+        <OnHitStatus Header="sparkled" HasApplyCondition="true" ApplySavingCharacteristic="Constitution" ApplySavingDifficulty="14" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="1" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip />
+          <Description />
+          <OnApplyDamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Radiant">
+              <Damage LastRoll="0" Modifier="4">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="4">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+          </OnApplyDamageList>
+          <DotDamageList />
+        </OnHitStatus>
+      </OnHitStatuses>
+      <DamageList />
+    </HitAttackTemplate>
+  </HitAttacks>
+  <Spells />
+  <Counters>
+    <Counter Name="Trumps" MaxValue="3" CurrentValue="3" />
+  </Counters>
+  <CustomVerboseStatusList />
+</Character>

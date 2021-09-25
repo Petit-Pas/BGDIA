@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Nycaloth" CA="18" MaxHp="123" TempHp="0" Hp="123" SpellSave="10" SpellHitModifier="0" Level="1">
+  <Characteristics MasteryBonus="4">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="5" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="0" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="4" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="1" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="0" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="2" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Immune" />
+      <DamageTypeAffinity Type="Cold" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Fire" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Immune" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. The nycaloth makes two melee attacks, or it makes one melee attack and teleports before or after the attack.
+- Teleport. The nycaloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see.</ActionDescription>
+  <SpecialAbilities>- Innate Spellcasting. The nycaloth's innate spellcasting ability is Charisma. The nycaloth can innately cast the following spells, requiring no material components:
+	- At will: darkness, detect magic, dispel magic, invisibility (self only), mirror image
+- Magic Resistance. The nycaloth has advantage on saving throws against spells and other magical effects.
+- Magic Weapons. The nycaloth's weapon attacks are magical.</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Greataxe" Range="CloseRange" HitBonus="9">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing_Magic">
+              <Damage Modifier="5">
+                <DicesList>
+                  <Dices DiceValue="12" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Claw" Range="CloseRange" HitBonus="9">
+        <OnHitStatuses HasSavingThrow="false">
+            <OnHitStatus Header="Fiendish Wound" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+              <ToolTip>take 5 (2d4) slashing damage at the start of each turn</ToolTip>
+              <Description>If the target is a creature, it must succeed on a DC 16 Constitution saving throw or take 5 (2d4) slashing damage at the start of each of its turns due to a fiendish wound. Each time the nycaloth hits the wounded target with this attack, the damage dealt by the wound increases by 5 (2d4). Any creature can take an action to stanch the wound with a successful DC 13 Wisdom (Medicine) check. The wound also closes if the target receives magical healing.</Description>
+              <OnApplyDamageList>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing_Magic">
+              <Damage Modifier="5">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

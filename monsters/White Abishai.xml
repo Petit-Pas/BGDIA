@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="White Abishai" CA="15" MaxHp="68" TempHp="0" Hp="68" SpellSave="10" SpellHitModifier="0" Level="6">
+  <Characteristics MasteryBonus="3">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="3" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="0" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="4" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="0" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="1" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="1" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Immune" />
+      <DamageTypeAffinity Type="Fire" Affinity="Immune" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Immune" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. The abishai makes two attacks: one with its longsword and one with its claw.
+REACTION
+- Vicious Reprisal. In response to taking damage, the abishai makes a bite attack against a random creature within 5 feet of it. If no creature is within reach, the abishai moves up to half its speed toward an enemy it can see, without provoking opportunity attacks.</ActionDescription>
+  <SpecialAbilities>- Devil's Sight. Magical darkness doesn't impede the abishai's darkvision.
+- Magic Resistance. The abishai has advantage on saving throws against spells and other magical effects.
+- Magic Weapons. The abishai's weapon attacks are magical.
+- Reckless. At the start of its turn, the abishai can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Go Reckless (self)" Range="CloseRange" HitBonus="20">
+        <OnHitStatuses HasSavingThrow="false">
+            <OnHitStatus Header="Reckless" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="true" RemainingRounds="1" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+              <ToolTip>Advantage on all attack by and against</ToolTip>
+              <Description>At the start of its turn, the abishai can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.</Description>
+              <OnApplyDamageList>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </OnHitStatuses>
+        <DamageList>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Longsword (2 hands)" Range="CloseRange" HitBonus="6">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+              <Damage Modifier="3">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Longsword (1 hand)" Range="CloseRange" HitBonus="6">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+              <Damage Modifier="3">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Claw" Range="CloseRange" HitBonus="6">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+              <Damage Modifier="3">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Bite" Range="CloseRange" HitBonus="6">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="3">
+                <DicesList>
+                  <Dices DiceValue="4" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

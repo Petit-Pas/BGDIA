@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Engulf (Shambling Mound)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+  <Description>The shambling mound engulfs a Medium or smaller creature grappled by it. The engulfed target is blinded, restrained, and unable to breathe, and it must succeed on a DC 14 Constitution saving throw at the start of each of the mound's turns or take 13 (2d8 + 4) bludgeoning damage. If the mound moves, the engulfed target moves with it. The mound can have only one creature engulfed at a time.</Description>
+  <AdditionalHitDamagePerLevel>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+      <OnHitStatus Header="Engulfed (!non automatic except damage)" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+        <ToolTip>Grappled, Blinded, Restrained, can't breathe</ToolTip>
+        <Description>/ ! \ 1st saving MUST fail
+The shambling mound engulfs a Medium or smaller creature grappled by it. The engulfed target is blinded, restrained, and unable to breathe, and it must succeed on a DC 14 Constitution saving throw at the start of each of the mound's turns or take 13 (2d8 + 4) bludgeoning damage. If the mound moves, the engulfed target moves with it. The mound can have only one creature engulfed at a time.</Description>
+        <OnApplyDamageList>
+        </OnApplyDamageList>
+        <DotDamageList>
+        </DotDamageList>
+      </OnHitStatus>
+  </AppliedStatus>
+</Spell>

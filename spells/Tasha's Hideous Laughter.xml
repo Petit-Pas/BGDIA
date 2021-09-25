@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Tasha's Hideous Laughter" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+  <Description>A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a Wisdom saving throw or fall prone, becoming incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn't affected.
+At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the spell ends. </Description>
+  <AdditionalHitDamagePerLevel>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+      <OnHitStatus Header="Laughing" HasApplyCondition="true" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="true" RemainingRounds="10" CanRedoSavingThrow="true" SavingIsRemadeAtStartOfTurn="false" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Canceled">
+        <ToolTip>Prone and incapacited</ToolTip>
+        <Description>The target must succeed on a Wisdom saving throw or fall prone, becoming incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn't affected. </Description>
+        <OnApplyDamageList>
+        </OnApplyDamageList>
+        <DotDamageList>
+        </DotDamageList>
+      </OnHitStatus>
+  </AppliedStatus>
+</Spell>

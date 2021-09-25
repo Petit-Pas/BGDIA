@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Shocking Grasp (1-4)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+  <Description>Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell Attack against the target. You have advantage on the Attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take Reactions until the start of its next turn.
+The spell's damage increases by 1d8 when you reach 5th Level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
+  <AdditionalHitDamagePerLevel>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+      <DamageTemplate SituationalDamageModifier="Normal" DamageType="Lightning">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="8" DiceAmount="1" />
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+      <OnHitStatus Header="Shocked" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="false" DurationIsBasedOnStartOfTurn="true" RemainingRounds="1" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+        <ToolTip>Can’t take reactions</ToolTip>
+        <Description>On a hit, the target takes 1d8 lightning damage, and it can’t take reactions until the start of its next turn.</Description>
+        <OnApplyDamageList>
+        </OnApplyDamageList>
+        <DotDamageList>
+        </DotDamageList>
+      </OnHitStatus>
+  </AppliedStatus>
+</Spell>

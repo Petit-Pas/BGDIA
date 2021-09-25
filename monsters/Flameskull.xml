@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Flameskull" CA="13" MaxHp="40" TempHp="0" Hp="40" SpellSave="13" SpellHitModifier="0" Level="4">
+  <Characteristics MasteryBonus="0">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="-5" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="3" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="2" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="3" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="0" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="0" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Immune" />
+      <DamageTypeAffinity Type="Fire" Affinity="Immune" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Poison" Affinity="Immune" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. The flameskull uses Fire Ray twice.</ActionDescription>
+  <SpecialAbilities>- Illumination. The flameskull sheds either dim light in a 15-foot radius, or bright light in a 15-foot radius and dim light for an additional 15 feet. It can switch between the options as an action.
+- Magic Resistance. The flameskull has advantage on saving throws against spells and other magical effects.
+- Rejuvenation. If the flameskull is destroyed, it regains all its hit points in 1 hour unless holy water is sprinkled on its remains or a dispel magic or remove curse spell is cast on them.
+- Spellcasting. The flameskull is a 5th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). It requires no somatic or material components to cast its spells. The flameskull has the following wizard spells prepared:
+ - Cantrips (at will): mage hand
+ - 1st level (3 slots): magic missile, shield
+ - 2nd level (2 slots): blur, flaming sphere
+ - 3rd level (1 slot): fireball</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Fire Ray" Range="LongRange" HitBonus="5">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="3" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+      <Counter Name="1st level Spells" MaxValue="3" CurrentValue="3" />
+      <Counter Name="2nd level Spells" MaxValue="2" CurrentValue="2" />
+      <Counter Name="3rd level Spells" MaxValue="1" CurrentValue="1" />
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

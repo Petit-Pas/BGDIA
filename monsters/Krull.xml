@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Krull" CA="17" MaxHp="117" TempHp="0" Hp="117" SpellSave="16" SpellHitModifier="8" Level="1">
+  <Characteristics MasteryBonus="3">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="5" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="2" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="2" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="1" />
+      <Characteristic Name="Wisdom" Mastery="true" Modifier="5" />
+      <Characteristic Name="Charisma" Mastery="true" Modifier="4" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Shell Defense.
+Krull withdraws into his shell. Until he emerges as a bonus action, he has a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in his shell, Krull is prone, his speed is 0 and can't increase, he has disadvantage on Dexterity saving throws, he can't take reactions, and the only action he can take is to emerge from his shell.</ActionDescription>
+  <SpecialAbilities>- Hold Breath. 
+Krull can hold his breath for 1 hour.
+- Inescapable Destruction.
+Necrotic damage dealt by Krull's spells ignores resistance to necrotic damage.
+- Spellcasting. 
+Krull is a 14th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks). He has the following cleric spells prepared:
+	- Cantrips (at will): chill touch, mending, resistance, sacred flame, spare the dying, thaumaturgy
+	- 1st level (4 slots): cure wounds, detect evil and good, false life, inflict wounds, ray of sickness
+	- 2nd level (3 slots): blindness/deafness, gentle repose, hold person, ray of enfeeblement, spiritual weapon
+	- 3rd level (3 slots): animate dead, magic circle, speak with dead, spirit guardians, vampiric touch
+	- 4th level (3 slots): banishment, blight, death ward, divination, locate creature
+	- 5th level (2 slots): antilife shell, cloudkill, contagion, greater restoration
+	- 6th level (1 slot): create undead, true seeing
+	- 7th level (1 slot): divine word, regenerate</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Claws" Range="CloseRange" HitBonus="8">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="5">
+                <DicesList>
+                  <Dices DiceValue="4" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="+1 Maul" Range="CloseRange" HitBonus="9">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Bludgeoning">
+              <Damage Modifier="6">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Necrotic">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+      <Spell Name="Chill Touch" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.
+If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.
+This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
+        <AdditionalHitDamagePerLevel>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Necrotic">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Necrotic">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+        </AppliedStatus>
+      </Spell>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

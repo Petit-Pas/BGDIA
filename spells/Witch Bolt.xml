@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Witch Bolt" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+  <Description />
+  <AdditionalHitDamagePerLevel>
+      <DamageTemplate SituationalDamageModifier="Normal" DamageType="Lightning">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="12" DiceAmount="1" />
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+      <DamageTemplate SituationalDamageModifier="Normal" DamageType="Lightning">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="12" DiceAmount="1" />
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+      <OnHitStatus Header="Witch Bolt" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="true" RemainingRounds="10" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+        <ToolTip>Will take 1d12 lightning damage on every turn</ToolTip>
+        <Description>On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you. </Description>
+        <OnApplyDamageList>
+        </OnApplyDamageList>
+        <DotDamageList>
+            <DotTemplate SituationalDamageModifier="Normal" DamageType="Lightning" TriggersStartOfTurn="false" TriggersOnCastersTurn="true">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="12" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DotTemplate>
+        </DotDamageList>
+      </OnHitStatus>
+  </AppliedStatus>
+</Spell>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Adult White Dragon (unfinished)" CA="18" MaxHp="200" TempHp="0" Hp="200" SpellSave="10" SpellHitModifier="0" Level="1">
+  <Characteristics MasteryBonus="5">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="6" />
+      <Characteristic Name="Dexterity" Mastery="true" Modifier="0" />
+      <Characteristic Name="Constitution" Mastery="true" Modifier="6" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="-1" />
+      <Characteristic Name="Wisdom" Mastery="true" Modifier="1" />
+      <Characteristic Name="Charisma" Mastery="true" Modifier="1" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Immune" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack.
+The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.</ActionDescription>
+  <SpecialAbilities>- Legendary Resistance (3/Day). 
+If the dragon fails a saving throw, it can choose to succeed instead.
+- Legendary Actions (3/Round)
+The dragon can take 3 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. The dragon regains spent legendary actions at the start of its turn.
+- Ice Walk.
+The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.
+</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Bite" Range="CloseRange" HitBonus="11">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="6">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Cold">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Claw" Range="CloseRange" HitBonus="11">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Tail" Range="CloseRange" HitBonus="11">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Bludgeoning">
+              <Damage Modifier="6">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+      <Spell Name="Frightful Presence (DC 14)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Wisdom" SavingDifficulty="14" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+        <Description>Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 14 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</Description>
+        <AdditionalHitDamagePerLevel>
+        </AdditionalHitDamagePerLevel>
+        <HitDamage>
+        </HitDamage>
+        <AppliedStatus HasSavingThrow="false">
+            <OnHitStatus Header="frightened" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+              <ToolTip>Disadvantage of Ability Checks and Attack Rolls</ToolTip>
+              <Description>Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 14 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</Description>
+              <OnApplyDamageList>
+              </OnApplyDamageList>
+              <DotDamageList>
+              </DotDamageList>
+            </OnHitStatus>
+        </AppliedStatus>
+      </Spell>
+  </Spells>
+  <Counters>
+      <Counter Name="Legendary Resistance" MaxValue="3" CurrentValue="3" />
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

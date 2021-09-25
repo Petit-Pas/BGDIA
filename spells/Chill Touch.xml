@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Chill Touch" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+  <Description>You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.
+If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.
+This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
+  <AdditionalHitDamagePerLevel>
+      <DamageTemplate SituationalDamageModifier="Normal" DamageType="Necrotic">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="8" DiceAmount="1">
+              <RolledDices />
+            </Dices>
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+      <DamageTemplate SituationalDamageModifier="Normal" DamageType="Necrotic">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="8" DiceAmount="1">
+              <RolledDices />
+            </Dices>
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+  </AppliedStatus>
+</Spell>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Torogar Steelfist" CA="17" MaxHp="168" TempHp="0" Hp="168" SpellSave="10" SpellHitModifier="0" Level="1">
+  <Characteristics MasteryBonus="4">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="true" Modifier="7" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="3" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="5" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="-1" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="-1" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="3" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. Torogar makes three attacks: two with his scimitars and one with his horns.</ActionDescription>
+  <SpecialAbilities>- Special Equipment. Torogar wears gauntlets of flaming fury and a belt of fire giant strength. Without the belt, his Strength is 21. He also carries a soul coin.
+- Goring Rush. Immediately after using the Dash action, Torogar can make one melee attack with his horns.
+- Labyrinthine Recall. Torogar can perfectly recall any path he has traveled.
+- Rage (Recharges after a Short or Long Rest). As a bonus action, Torogar can enter a rage that lasts for 1 minute. The rage ends early if Torogar is knocked unconscious or if his turn ends and he hasn't attacked a hostile creature or taken damage since his last turn. While raging, Torogar gains the following benefits:
+	- He has advantage on Strength checks and Strength saving throws.
+	- He deals an extra 3 damage when he hits a target with a melee weapon attack.
+	-He has resistance to bludgeoning, piercing, and slashing damage.</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Scimitar" Range="CloseRange" HitBonus="11">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing_Magic">
+              <Damage Modifier="7">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="6" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Horns" Range="CloseRange" HitBonus="11">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="7">
+                <DicesList>
+                  <Dices DiceValue="8" DiceAmount="2">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

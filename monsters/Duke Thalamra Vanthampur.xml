@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Duke Thalamra Vanthampur" CA="10" MaxHp="78" TempHp="0" Hp="78" SpellSave="14" SpellHitModifier="0" Level="4">
+  <Characteristics MasteryBonus="0">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="3" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="0" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="2" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="1" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="3" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="4" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. Thalamra uses eldritch blast twice or makes two unarmed strikes.
+- REACTION: Hellish Rebuke (1st-Level Spell; 2/Day).
+When Thalamra is damaged by a creature within 60 feet of her that she can see, the creature that damaged her is engulfed in hellish flames and must make a DC 14 Dexterity saving throw, taking 16 (3d10) fire damage on a failed save, or half as much damage on a successful one.</ActionDescription>
+  <SpecialAbilities>- Dark Devotion. Thalamra has advantage on saving throws against being charmed or frightened.
+- Devil's Sight. Thalamra can see normally in darkness, both magical and nonmagical, out to a distance of 120 feet.</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Eldritch Blast (x2, range)" Range="LongRange" HitBonus="6">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Force">
+              <Damage Modifier="4">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+      <HitAttackTemplate Name="Unarmed Strike" Range="CloseRange" HitBonus="5">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Bludgeoning">
+              <Damage Modifier="4">
+                <DicesList />
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+      <Counter Name="Hellish Rebuke (2nd level, 2/Day)" MaxValue="2" CurrentValue="2" />
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

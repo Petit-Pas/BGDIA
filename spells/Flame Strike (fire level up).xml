@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Flame Strike (fire level up)" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="5" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+  <Description>A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 4d6 fire damage and 4d6 radiant damage on a failed save, or half as much damage on a successful one.
+At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th.</Description>
+  <AdditionalHitDamagePerLevel>
+      <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="6" DiceAmount="1">
+              <RolledDices />
+            </Dices>
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </AdditionalHitDamagePerLevel>
+  <HitDamage>
+      <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="6" DiceAmount="4">
+              <RolledDices />
+            </Dices>
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+      <DamageTemplate SituationalDamageModifier="Halved" DamageType="Radiant">
+        <Damage Modifier="0">
+          <DicesList>
+            <Dices DiceValue="6" DiceAmount="4">
+              <RolledDices />
+            </Dices>
+          </DicesList>
+        </Damage>
+      </DamageTemplate>
+  </HitDamage>
+  <AppliedStatus HasSavingThrow="false">
+  </AppliedStatus>
+</Spell>

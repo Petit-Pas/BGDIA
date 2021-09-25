@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Narzugon" CA="20" MaxHp="112" TempHp="0" Hp="112" SpellSave="10" SpellHitModifier="0" Level="1">
+  <Characteristics MasteryBonus="5">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="5" />
+      <Characteristic Name="Dexterity" Mastery="true" Modifier="0" />
+      <Characteristic Name="Constitution" Mastery="true" Modifier="3" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="3" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="2" />
+      <Characteristic Name="Charisma" Mastery="true" Modifier="4" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Cold" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Fire" Affinity="Immune" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Immune" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>- Multiattack. The narzugon uses its Infernal Command or Terrifying Command. It also makes three hellfire lance attacks.
+- Infernal Command. Each ally of the narzugon within 60 feet of it can't be charmed or frightened until the end of the narzugon's next turn.
+- Terrifying Command. Each creature that isn't a fiend within 60 feet of the narzugon that can hear it must succeed on a DC 17 Charisma saving throw or become frightened of it for 1 minute.
+A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that makes a successful saving throw is immune to this narzugon's Terrifying Command for 24 hours.
+- Healing (1/Day). The narzugon, or one creature it touches, regains up to 100 hit points.</ActionDescription>
+  <SpecialAbilities>- Diabolical Sense. The narzugon has advantage on Wisdom (Perception) checks made to perceive good-aligned creatures.
+- Infernal Tack. The narzugon wears spurs that are part of infernal tack, which allow it to summon its nightmare companion.
+- Magic Resistance. The narzugon has advantage on saving throws against spells and other magical effects.</SpecialAbilities>
+  <HitAttacks>
+      <HitAttackTemplate Name="Hellfire Lance" Range="CloseRange" HitBonus="10">
+        <OnHitStatuses HasSavingThrow="false">
+        </OnHitStatuses>
+        <DamageList>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+              <Damage Modifier="5">
+                <DicesList>
+                  <Dices DiceValue="12" DiceAmount="1" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+            <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+              <Damage Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="10" DiceAmount="3" />
+                </DicesList>
+              </Damage>
+            </DamageTemplate>
+        </DamageList>
+      </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+  </Spells>
+  <Counters>
+  </Counters>
+  <CustomVerboseStatusList>
+  </CustomVerboseStatusList>
+</Monster>

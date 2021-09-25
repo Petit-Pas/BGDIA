@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Character xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Azur Wilryn" CA="18" MaxHp="50" TempHp="0" Hp="42" SpellSave="16" SpellHitModifier="8" HasInspiration="true" Level="8">
+  <Characteristics MasteryBonus="3">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="-1" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="3" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="2" />
+      <Characteristic Name="Intelligence" Mastery="true" Modifier="5" />
+      <Characteristic Name="Wisdom" Mastery="true" Modifier="0" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="0" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription />
+  <SpecialAbilities />
+  <HitAttacks>
+    <HitAttackTemplate Name="Arbalète légère" Range="LongRange" HitBonus="6">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+          <Damage LastRoll="0" Modifier="3">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+    <HitAttackTemplate Name="Dague" Range="CloseRange" HitBonus="5">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+          <Damage LastRoll="0" Modifier="3">
+            <DicesList>
+              <Dices DiceValue="4" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+    <Spell Name="Bless" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="1" BaseLevel="1" AmountTargets="3" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.
+At Higher Levels: When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
+</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Blessed" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="10" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>+1d4 to attack rolls and saving throws</ToolTip>
+          <Description>Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.</Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Burning Hands" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one.
+The fire ignites any flammable objects in the area that aren't being worn or carried.
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st. </Description>
+      <AdditionalHitDamagePerLevel>
+        <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="6" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </AdditionalHitDamagePerLevel>
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="6" DiceAmount="3">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Charm Person" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="1" BaseLevel="1" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them. </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Charmed" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="16" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Canceled">
+          <ToolTip>Charmed</ToolTip>
+          <Description>Charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you. </Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Cloud of Daggers (damage)" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="2" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there.
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd. </Description>
+      <AdditionalHitDamagePerLevel>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="4" DiceAmount="2">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </AdditionalHitDamagePerLevel>
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="4" DiceAmount="4">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Cloud of Daggers (self)" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="2" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description />
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Channeling Cloud of Daggers" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>You can cast Cloud of Daggers (damage)</ToolTip>
+          <Description>You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there.
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd. </Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Darkvision" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="2" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet. </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Darkvision" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>Can see in the dark up to 60 feet</ToolTip>
+          <Description>For the duration, that creature has darkvision out to a range of 60 feet. </Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Fire Bolt (1-4)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn’t being worn or carried. This spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="10" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Fire Bolt (5-11)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn’t being worn or carried. This spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="10" DiceAmount="2">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Fireball" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="3" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one. The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried.
+At Higher Levels: When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="6" DiceAmount="8">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Hold Person" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="1" BaseLevel="2" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them. </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Paralyzed" HasApplyCondition="true" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="16" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="10" CanRedoSavingThrow="true" SavingIsRemadeAtStartOfTurn="false" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Canceled">
+          <ToolTip>fails STR and DEX DCs, advantage against, automatic crits on melee</ToolTip>
+          <Description>A paralyzed creature is incapacitated (see the condition) and can’t move or speak.
+The creature automatically fails Strength and Dexterity Saving Throws.
+Attack Rolls against the creature have advantage.
+Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.
+</Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Invisibility" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="1" BaseLevel="2" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person. The spell ends for a target that attacks or casts a spell.
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd. </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Invisible" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>Invisible until attacks or casts spell</ToolTip>
+          <Description>Anything the target is wearing or carrying is invisible as long as it is on the target's person. The spell ends for a target that attacks or casts a spell. </Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Lightning" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="3" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 8d6 lightning damage on a failed save, or half as much damage on a successful one. The lightning ignites flammable objects in the area that aren’t being worn or carried.
+At Higher Levels: When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot above 3rd.</Description>
+      <AdditionalHitDamagePerLevel>
+        <DamageTemplate SituationalDamageModifier="Halved" DamageType="Lightning">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="6" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </AdditionalHitDamagePerLevel>
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Halved" DamageType="Lightning">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="6" DiceAmount="8">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Mage Armor" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action. </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Mage Armor" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>+3 AC</ToolTip>
+          <Description>The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action. </Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Magic Missile" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="1" BaseLevel="1" AmountTargets="3" CanSelectSameTargetTwice="true" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="true">
+      <Description>You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.
+At Higher Levels: When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot above 1st.</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Force">
+          <Damage LastRoll="0" Modifier="1">
+            <DicesList>
+              <Dices DiceValue="4" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Mind Spike" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="2" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You reach into the mind of one creature you can see within range. The target must make a Wisdom saving throw, taking 3d8 psychic damage on a failed save, or half as much damage on a successful one. On a failed save, you also always know the target's location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can’t become hidden from you, and if it’s invisible, it gains no benefit from that condition against you.
+At higher level
+When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd. </Description>
+      <AdditionalHitDamagePerLevel>
+        <DamageTemplate SituationalDamageModifier="Halved" DamageType="Psychic">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </AdditionalHitDamagePerLevel>
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Halved" DamageType="Psychic">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="3">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus>
+        <OnHitStatus Header="Mind Spiked" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Canceled">
+          <ToolTip>Caster knows where you are, even invisible</ToolTip>
+          <Description>On a failed save, you also always know the target's location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can’t become hidden from you, and if it’s invisible, it gains no benefit from that condition against you. </Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Ray of Sickness" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 poison damage and must make a Constitution saving throw. On a failed save, it is also poisoned until the end of your next turn.
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.</Description>
+      <AdditionalHitDamagePerLevel>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Poison">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </AdditionalHitDamagePerLevel>
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Poison">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="2">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus>
+        <OnHitStatus Header="Poisoned" HasApplyCondition="true" ApplySavingCharacteristic="Constitution" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="2" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>Disadvantage on Attack Rolls and Ability Checks.</ToolTip>
+          <Description>Poisoned - Disadvantage on Attack Rolls and Ability Checks.</Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Scorching Ray" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="1" BaseLevel="2" AmountTargets="3" CanSelectSameTargetTwice="true" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You create three rays of fire and hurl them at targets within range. You can hurl them at one target or several. Make a ranged spell attack for each ray. On a hit, the target takes 2d6 fire damage.
+At Higher Levels: When you cast this spell using a spell slot of 3rd level or higher, you create one additional ray for each slot level above 2nd.</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Fire">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="6" DiceAmount="2">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Shatter" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="2" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Constitution" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range. Each creature in a 10-foot-radius sphere centered on that point must make a Constitution saving throw. A creature takes 3d8 thunder damage on a failed save, or half as much damage on a successful one. A creature made of inorganic material such as stone, crystal, or metal has disadvantage on this saving throw. A nonmagical object that isn’t being worn or carried also takes the damage if it’s in the spell’s area.
+At Higher Levels: When you cast this spell using a spell slot of or higher, the damage increases by 1d8 for each slot level above 2nd.</Description>
+      <AdditionalHitDamagePerLevel>
+        <DamageTemplate SituationalDamageModifier="Halved" DamageType="Thunder">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </AdditionalHitDamagePerLevel>
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Halved" DamageType="Thunder">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="3">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Shield" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Shield" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="false" DurationIsBasedOnStartOfTurn="true" RemainingRounds="1" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>+5 AC</ToolTip>
+          <Description>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.</Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Shocking Grasp (1-4)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell Attack against the target. You have advantage on the Attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take Reactions until the start of its next turn.
+The spell's damage increases by 1d8 when you reach 5th Level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Lightning">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus>
+        <OnHitStatus Header="Shocked" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="false" DurationIsBasedOnStartOfTurn="true" RemainingRounds="1" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>Can’t take reactions</ToolTip>
+          <Description>On a hit, the target takes 1d8 lightning damage, and it can’t take reactions until the start of its next turn.</Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Shocking Grasp (5-11)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell Attack against the target. You have advantage on the Attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take Reactions until the start of its next turn.
+The spell's damage increases by 1d8 when you reach 5th Level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Lightning">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="2">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus>
+        <OnHitStatus Header="Shocked" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="false" DurationIsBasedOnStartOfTurn="true" RemainingRounds="1" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>Can’t take reactions</ToolTip>
+          <Description>can’t take reactions until the start of its next turn.</Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Sleep" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>This spell sends creatures into a magical slumber. Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).
+Starting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.
+Undead and creatures immune to being charmed aren't affected by this spell.
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st. </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Asleep" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="true" RemainingRounds="10" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="false" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>Unconscious until damaged or shaken</ToolTip>
+          <Description>falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected. </Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Slow" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="3" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.
+An affected target’s speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can’t use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature’s abilities or magic items, it can’t make more than one melee or ranged attack during its turn.
+If the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn’t take effect until the creature’s next turn, and the creature must use its action on that turn to complete the spell. If it can’t, the spell is wasted.
+A creature affected by this spell makes another Wisdom saving throw at the end of its turn. On a successful save, the effect ends for it.</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Slowed" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="16" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="10" CanRedoSavingThrow="true" SavingIsRemadeAtStartOfTurn="false" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Canceled">
+          <ToolTip>-2 to AC and DEX savings, can't use reactions. Action OR Bonus Action. No more than 1 melee or ranged attack per turn. A spell cast with cast time of 1 action fails on 11 or higher on D20.</ToolTip>
+          <Description>An affected target’s speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can’t use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature’s abilities or magic items, it can’t make more than one melee or ranged attack during its turn.
+If the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn’t take effect until the creature’s next turn, and the creature must use its action on that turn to complete the spell. If it can’t, the spell is wasted.
+A creature affected by this spell makes another Wisdom saving throw at the end of its turn. On a successful save, the effect ends for it.</Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Suggestion" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="2" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You suggest a course of activity (limited to a sentence or two) and magically influence a creature you can see within range that can hear and understand you. Creatures that can't be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act ends the spell.
+The target must make a Wisdom saving throw. On a failed save, it pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do.
+You can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a knight give her warhorse to the first beggar she meets. If the condition isn't met before the spell expires, the activity isn't performed.
+If you or any of your companions damage the target, the spell ends. </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Suggested" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="false" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="0" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>Must follow commands</ToolTip>
+          <Description>Pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do. </Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Tasha's Hideous Laughter" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a Wisdom saving throw or fall prone, becoming incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn't affected.
+At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the spell ends. </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Laughing" HasApplyCondition="true" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="true" RemainingRounds="10" CanRedoSavingThrow="true" SavingIsRemadeAtStartOfTurn="false" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Canceled">
+          <ToolTip>Prone and incapacited</ToolTip>
+          <Description>The target must succeed on a Wisdom saving throw or fall prone, becoming incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn't affected. </Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Toll the Dead (1-4, full)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage.
+The spell’s damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12). </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Canceled" DamageType="Necrotic">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Toll the Dead (1-4, not full)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage.
+The spell’s damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12). </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Canceled" DamageType="Necrotic">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="12" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Toll the Dead (5-11, full)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage.
+The spell’s damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12). </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Canceled" DamageType="Necrotic">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="2">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Toll the Dead (5-11, not full)" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="0" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage.
+The spell’s damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12). </Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Canceled" DamageType="Necrotic">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="12" DiceAmount="2">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Witch Bolt" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="0" BaseLevel="1" AmountTargets="1" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="true" HitRollBonus="0" AutomaticalyHits="false">
+      <Description />
+      <AdditionalHitDamagePerLevel>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Lightning">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="12" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </AdditionalHitDamagePerLevel>
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Lightning">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="12" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus>
+        <OnHitStatus Header="Witch Bolt" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="true" RemainingRounds="10" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>Will take 1d12 lightning damage on every turn</ToolTip>
+          <Description>On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you. </Description>
+          <OnApplyDamageList />
+          <DotDamageList>
+            <DotTemplate SituationalDamageModifier="Normal" DamageType="Lightning" TriggersStartOfTurn="false" TriggersOnCastersTurn="true">
+              <Damage LastRoll="0" Modifier="0">
+                <DicesList>
+                  <Dices DiceValue="12" DiceAmount="1">
+                    <RolledDices />
+                  </Dices>
+                </DicesList>
+              </Damage>
+            </DotTemplate>
+          </DotDamageList>
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+  </Spells>
+  <Counters>
+    <Counter Name="LvL 1 spells" MaxValue="4" CurrentValue="1" />
+    <Counter Name="LvL 2 spells" MaxValue="3" CurrentValue="1" />
+    <Counter Name="Dés de vie" MaxValue="8" CurrentValue="8" />
+    <Counter Name="Lvl 3 spells" MaxValue="3" CurrentValue="1" />
+    <Counter Name="Lvl 4 spells" MaxValue="2" CurrentValue="2" />
+  </Counters>
+  <CustomVerboseStatusList />
+</Character>

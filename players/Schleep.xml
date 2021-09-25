@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Character xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Schleep" CA="17" MaxHp="68" TempHp="0" Hp="1" SpellSave="11" SpellHitModifier="0" HasInspiration="false" Level="8">
+  <Characteristics MasteryBonus="3">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="true" Modifier="4" />
+      <Characteristic Name="Dexterity" Mastery="true" Modifier="2" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="2" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="0" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="1" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="-1" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription />
+  <SpecialAbilities>- Défense contre les attaques multiples. 
+Quand une créature vous touche lors d'une attaque, vous gagnez un bonus de +4 à la CA contre toutes les attaques ultérieures effectuées par cette créature pour le reste du tour.
+- +5 pied/rounds
+- terrain difficile non magique = terrain normal</SpecialAbilities>
+  <HitAttacks>
+    <HitAttackTemplate Name="Arc Long" Range="LongRange" HitBonus="5">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+          <Damage LastRoll="0" Modifier="2">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+    <HitAttackTemplate Name="Flail (silvered)" Range="CloseRange" HitBonus="7">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Bludgeoning_Silver">
+          <Damage LastRoll="0" Modifier="4">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+    <HitAttackTemplate Name="Dagger" Range="CloseRange" HitBonus="5">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+          <Damage LastRoll="0" Modifier="2">
+            <DicesList>
+              <Dices DiceValue="4" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+    <HitAttackTemplate Name="Arc Long (silver)" Range="LongRange" HitBonus="5">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing_Silver">
+          <Damage LastRoll="0" Modifier="2">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+    <HitAttackTemplate Name="Long Sword +1" Range="CloseRange" HitBonus="8">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing_Magic">
+          <Damage LastRoll="0" Modifier="5">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+  </HitAttacks>
+  <Spells />
+  <Counters>
+    <Counter Name="Pièce hésitante de dame Tymora" MaxValue="3" CurrentValue="0" />
+    <Counter Name="Lvl 1 Spells" MaxValue="4" CurrentValue="3" />
+    <Counter Name="Baies" MaxValue="10" CurrentValue="9" />
+    <Counter Name="Dés de Vie" MaxValue="8" CurrentValue="7" />
+    <Counter Name="flèches Argent" MaxValue="20" CurrentValue="7" />
+    <Counter Name="Lvl 2 Spells" MaxValue="3" CurrentValue="3" />
+    <Counter Name="Marked Ennemy" MaxValue="3" CurrentValue="3" />
+  </Counters>
+  <CustomVerboseStatusList />
+</Character>

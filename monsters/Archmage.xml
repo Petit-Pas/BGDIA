@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Archmage" CA="12" MaxHp="99" TempHp="0" Hp="99" SpellSave="17" SpellHitModifier="9" Level="1">
+  <Characteristics MasteryBonus="4">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="false" Modifier="0" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="2" />
+      <Characteristic Name="Constitution" Mastery="false" Modifier="1" />
+      <Characteristic Name="Intelligence" Mastery="true" Modifier="5" />
+      <Characteristic Name="Wisdom" Mastery="true" Modifier="2" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="3" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Resistant" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription>See Archmage description for now</ActionDescription>
+  <SpecialAbilities>Resist to damage from spells</SpecialAbilities>
+  <HitAttacks>
+    <HitAttackTemplate Name="Dagger" Range="CloseRange" HitBonus="6">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+          <Damage LastRoll="0" Modifier="2">
+            <DicesList>
+              <Dices DiceValue="4" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+  </HitAttacks>
+  <Spells>
+    <Spell Name="Bless" Range="CloseRange" CanBeCastAtHigherLevel="true" AdditionalTargetPerLevel="1" BaseLevel="1" AmountTargets="3" CanSelectSameTargetTwice="false" HasSavingThrow="false" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.
+At Higher Levels: When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
+</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Blessed" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="10" CanRedoSavingThrow="false" SavingIsRemadeAtStartOfTurn="true" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Maintained">
+          <ToolTip>+1d4 to attack rolls and saving throws</ToolTip>
+          <Description>Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.</Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+    <Spell Name="Fireball" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="3" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Dexterity" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one. The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried.
+At Higher Levels: When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage>
+        <DamageTemplate SituationalDamageModifier="Halved" DamageType="Fire">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="6" DiceAmount="8">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </HitDamage>
+      <AppliedStatus />
+    </Spell>
+    <Spell Name="Slow" Range="CloseRange" CanBeCastAtHigherLevel="false" AdditionalTargetPerLevel="0" BaseLevel="3" AmountTargets="0" CanSelectSameTargetTwice="false" HasSavingThrow="true" SavingCharacteristic="Wisdom" SavingDifficulty="0" IsAnAttack="false" HitRollBonus="0" AutomaticalyHits="false">
+      <Description>You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.
+An affected target’s speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can’t use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature’s abilities or magic items, it can’t make more than one melee or ranged attack during its turn.
+If the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn’t take effect until the creature’s next turn, and the creature must use its action on that turn to complete the spell. If it can’t, the spell is wasted.
+A creature affected by this spell makes another Wisdom saving throw at the end of its turn. On a successful save, the effect ends for it.</Description>
+      <AdditionalHitDamagePerLevel />
+      <HitDamage />
+      <AppliedStatus>
+        <OnHitStatus Header="Slowed" HasApplyCondition="false" ApplySavingCharacteristic="Wisdom" ApplySavingDifficulty="0" HasAMaximumDuration="true" DurationIsCalculatedOnCasterTurn="true" DurationIsBasedOnStartOfTurn="false" RemainingRounds="10" CanRedoSavingThrow="true" SavingIsRemadeAtStartOfTurn="false" EndsOnCasterLossOfConcentration="true" HasSpellSaving="false" SpellApplicationModifier="Canceled">
+          <ToolTip>-2 to AC and DEX savings, can't use reactions. Action OR Bonus Action. No more than 1 melee or ranged attack per turn. A spell cast with cast time of 1 action fails on 11 or higher on D20.</ToolTip>
+          <Description>An affected target’s speed is halved, it takes a −2 penalty to AC and Dexterity saving throws, and it can’t use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature’s abilities or magic items, it can’t make more than one melee or ranged attack during its turn.
+If the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn’t take effect until the creature’s next turn, and the creature must use its action on that turn to complete the spell. If it can’t, the spell is wasted.
+A creature affected by this spell makes another Wisdom saving throw at the end of its turn. On a successful save, the effect ends for it.</Description>
+          <OnApplyDamageList />
+          <DotDamageList />
+        </OnHitStatus>
+      </AppliedStatus>
+    </Spell>
+  </Spells>
+  <Counters />
+  <CustomVerboseStatusList />
+</Monster>

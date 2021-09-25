@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Character xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Ekvir" CA="16" MaxHp="76" TempHp="0" Hp="10" SpellSave="10" SpellHitModifier="0" HasInspiration="false" Level="8">
+  <Characteristics MasteryBonus="3">
+    <CharacteristicsList>
+      <Characteristic Name="Strength" Mastery="true" Modifier="5" />
+      <Characteristic Name="Dexterity" Mastery="false" Modifier="0" />
+      <Characteristic Name="Constitution" Mastery="true" Modifier="3" />
+      <Characteristic Name="Intelligence" Mastery="false" Modifier="-1" />
+      <Characteristic Name="Wisdom" Mastery="false" Modifier="0" />
+      <Characteristic Name="Charisma" Mastery="false" Modifier="2" />
+    </CharacteristicsList>
+  </Characteristics>
+  <DamageAffinities>
+    <AffinityList>
+      <DamageTypeAffinity Type="Bludgeoning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Silver" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Bludgeoning_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Piercing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Slashing_Magic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Acid" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Cold" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Fire" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Force" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Lightning" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Necrotic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Poison" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Psychic" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Radiant" Affinity="Neutral" />
+      <DamageTypeAffinity Type="Thunder" Affinity="Neutral" />
+    </AffinityList>
+  </DamageAffinities>
+  <ActionDescription />
+  <SpecialAbilities />
+  <HitAttacks>
+    <HitAttackTemplate Name="Epée à deux mains" Range="CloseRange" HitBonus="8">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Bludgeoning_Silver">
+          <Damage LastRoll="0" Modifier="5">
+            <DicesList>
+              <Dices DiceValue="6" DiceAmount="2">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+    <HitAttackTemplate Name="Arbalète légère" Range="LongRange" HitBonus="3">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Piercing">
+          <Damage LastRoll="0" Modifier="0">
+            <DicesList>
+              <Dices DiceValue="8" DiceAmount="1">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+    <HitAttackTemplate Name="Epée à deux mains -5 / +10" Range="CloseRange" HitBonus="3">
+      <OnHitStatuses />
+      <DamageList>
+        <DamageTemplate SituationalDamageModifier="Normal" DamageType="Slashing_Silver">
+          <Damage LastRoll="0" Modifier="15">
+            <DicesList>
+              <Dices DiceValue="6" DiceAmount="2">
+                <RolledDices />
+              </Dices>
+            </DicesList>
+          </Damage>
+        </DamageTemplate>
+      </DamageList>
+    </HitAttackTemplate>
+  </HitAttacks>
+  <Spells />
+  <Counters>
+    <Counter Name="Second Souffle" MaxValue="1" CurrentValue="1" />
+    <Counter Name="Endurance de la Pierre" MaxValue="1" CurrentValue="0" />
+    <Counter Name="Sursaut" MaxValue="1" CurrentValue="1" />
+    <Counter Name="Dés de supériorité" MaxValue="5" CurrentValue="1" />
+    <Counter Name="Dés de vie" MaxValue="8" CurrentValue="8" />
+  </Counters>
+  <CustomVerboseStatusList>
+    <CustomVerboseStatus Header="lycanthrope rat">
+      <ToolTip />
+      <Description />
+    </CustomVerboseStatus>
+    <CustomVerboseStatus Header="Cursed">
+      <ToolTip />
+      <Description />
+    </CustomVerboseStatus>
+  </CustomVerboseStatusList>
+</Character>
